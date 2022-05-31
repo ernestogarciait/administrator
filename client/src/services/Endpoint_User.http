@@ -1,0 +1,41 @@
+###
+Send Request
+GET http://localhost:3000/services HTTP/1.1
+                          
+###
+Send Request
+POST http://localhost:9000/api HTTP/1.1
+Content-Type: application/json
+                          
+{ 
+        "id " : 0
+        "nombre" : 'Incluya Texto'
+        "apellido" : 'Incluya Texto'
+        "cedula" : 'Incluya Texto'
+        "telefonos" : 'Incluya Texto'
+        "direccion" : 'Incluya Texto'
+        "usuario" : 'Incluya Texto'
+        "clave" : 'Incluya Texto'
+        "estatus" : 1000.00
+        "email" : 'Incluya Texto'
+} 
+  
+###
+Send Request
+PUT http://localhost:9000/1 HTTP/1.1
+{ 
+        "nombre" : 'Incluya Texto'
+        "apellido" : 'Incluya Texto'
+        "cedula" : 'Incluya Texto'
+        "telefonos" : 'Incluya Texto'
+        "direccion" : 'Incluya Texto'
+        "usuario" : 'Incluya Texto'
+        "clave" : 'Incluya Texto'
+        "estatus" : 1000.00
+        "email" : 'Incluya Texto'
+} 
+  
+###
+Send Request
+DELETE http://localhost:port/1 HTTP/1.1
+

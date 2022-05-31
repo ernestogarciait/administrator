@@ -1,0 +1,38 @@
+###
+GET http://localhost:9000/api/getGen_usuarios HTTP/1.1
+                          
+###
+
+POST http://localhost:9000/api/postGen_usuarios HTTP/1.1
+Content-Type: application/json
+
+{ 
+        "id" : -1,
+        "nombre" : "Ernesto",
+        "apellido" : "Garcia",
+        "cedula" : "12783210",
+        "telefonos" : "61538038",
+        "direccion" : "panama",
+        "usuario" : "regb2001",
+        "clave" : "1234",
+        "estatus" : 1000.00,
+        "email" : "egarcia@oriomka.com"
+} 
+  
+###
+PUT http://localhost:9000/1 HTTP/1.1
+{ 
+        "nombre" : 'Incluya Texto'
+        "apellido" : 'Incluya Texto'
+        "cedula" : 'Incluya Texto'
+        "telefonos" : 'Incluya Texto'
+        "direccion" : 'Incluya Texto'
+        "usuario" : 'Incluya Texto'
+        "clave" : 'Incluya Texto'
+        "estatus" : 1000.00
+        "email" : 'Incluya Texto'
+} 
+  
+###
+DELETE http://localhost:port/1 HTTP/1.1
+
