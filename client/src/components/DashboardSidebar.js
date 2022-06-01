@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
+//import {fecthMenu} from 'src/services/DasborardSidebarController.js';
 import {
   Avatar,
   Box,
@@ -10,7 +11,8 @@ import {
   Hidden,
   List,
   Typography
-} from '@material-ui/core';
+} from '@mui/material';
+
 import {
   AlertCircle as AlertCircleIcon,
   BarChart as BarChartIcon,
@@ -23,12 +25,47 @@ import {
 } from 'react-feather';
 import NavItem from './NavItem';
 
+//const [items, setItems] = useState([]);
+
 const user = {
   avatar: '/static/images/avatars/avatar_6.png',
   jobTitle: 'Senior Developer',
   name: 'Katarina Smith'
 };
+const fecthItems = async () => {
+  
 
+
+//  let resultado = await fecthMenu();
+  const requestOptions = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin':  'http://localhost:9000',
+    'Access-Control-Allow-Methods': 'POST',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+  },
+    body: JSON.stringify({ idusuario: 1})
+};
+// GET request using fetch with error handling
+fetch('http://localhost:9000/api/menu',requestOptions)
+    .then(async response => {
+        const data = await response.json();
+        // check for error response
+        if (!response.ok) {
+            // get error message from body or default to response statusText
+            const error = (data && data.message) || response.statusText;
+            return Promise.reject(error);
+        }
+        console.log(data);
+        //this.setState({ returndata: data.total })
+    })
+
+  //console.log(resultado);
+
+ // setItems(resultado);
+  
+}
+fecthItems();
 const items = [
   {
     href: '/app/dashboard',
